@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 apt-get update
 # Install essentials
 apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
@@ -7,17 +6,11 @@ apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadli
 apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.2 --rails
-curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm use 2.2.2 --default
 gem install bundler
-# Get git up and github
+# Git color
 git config --global color.ui true
-git config --global user.name "ralucas"
-git config --global user.email "richard@richardalucas.com"
-ssh-keygen -t rsa -C "richard@richardalucas.com"
-cat ~/.ssh/id_rsa.pub
-ssh -T git@github.com
 # Install Node.js
 add-apt-repository ppa:chris-lea/node.js
 apt-get update
