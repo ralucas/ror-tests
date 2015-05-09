@@ -1,0 +1,6 @@
+This is a file for reading in.
+Hi, how are you?
+Cheers
+
+What's up?
+Nothing.

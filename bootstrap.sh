@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 apt-get update
-# Install essentials
+# Install essentials, sqlite3, openssl, git
 apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 # Install RVM, Ruby, Rails, and Gem Bundler
 apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
