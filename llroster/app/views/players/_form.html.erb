@@ -1,11 +1,11 @@
 <%= form_for(@player) do |f| %>
   <% if @player.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
 
-      <ul>
+      <ul class="list-group">
       <% @player.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="list-group-item list-group-item-danger"><%= message %></li>
       <% end %>
       </ul>
     </div>
@@ -17,21 +17,21 @@
   </div>
   <div class="field form-group">
     <%= f.label :first %><br>
-    <%= f.text_field :first %>
+    <%= f.text_field(:first, class: "form-control") %>
   </div>
   <div class="field form-group">
     <%= f.label :position %><br>
-    <%= f.select :position, options_for_select(["Catcher", "Second Base", "Pitcher", "First Base", "Third Base", "Outfield"]) %>
+    <%= f.select(:position, options_for_select(["Catcher", "Second Base", "Pitcher", "First Base", "Third Base", "Outfield"]), {}, class: "form-control") %>
   </div>
   <div class="field form-group">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+    <%= f.text_field(:phone, class: "form-control") %>
   </div>
   <div class="field form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field(:email, class: "form-control") %>
   </div>
-  <div class="actions btn btn-default">
-    <%= f.submit %>
+  <div class="actions">
+    <%= f.submit(class: "btn btn-primary") %>
   </div>
 <% end %>
